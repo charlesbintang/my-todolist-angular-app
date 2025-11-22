@@ -1,0 +1,14 @@
+<h2>To-do List</h2>
+
+@if (items.length > 0) {
+<ul>
+    @for (item of items; track $index) {
+        <li>
+            <span>{{ item }}</span>
+            <button type="button" aria-label="Delete {{ item }}" (click)="deleteTodo(item)">Delete</button>
+        </li>
+    }
+</ul>
+} @else {
+    <p>No todo items found</p>
+}

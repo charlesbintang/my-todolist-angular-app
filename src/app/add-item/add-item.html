@@ -1,4 +1,4 @@
 <div>
-    <input [formControl]="newTask" placeholder="Add a new item" type="text">
+    <input [formControl]="newTask" placeholder="Add a new item" type="text" (keydown.enter)="onSubmitTodo()">
     <button (click)="onSubmitTodo()">Add</button>
 </div>

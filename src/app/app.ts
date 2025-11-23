@@ -19,9 +19,7 @@ export class App {
     }
   }
 
-  removeTodo(todo: string) {
-    if (todo) {
-      this.todos.update(todos => todos.filter(item => item !== todo));
-    }
+  removeTodo(index: number) {
+    this.todos.update(todos => todos.filter((_, i) => i !== index));
   }
 }

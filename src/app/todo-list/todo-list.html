@@ -5,7 +5,7 @@
     @for (item of items; track $index) {
         <li>
             <span>{{ item }}</span>
-            <button type="button" aria-label="Delete {{ item }}" (click)="deleteTodo(item)">Delete</button>
+            <button type="button" aria-label="Delete {{ item }}" (click)="deleteTodo($index)">Delete</button>
         </li>
     }
 </ul>

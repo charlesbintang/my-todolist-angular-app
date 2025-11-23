@@ -8,12 +8,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class TodoList {
   @Input() items: string[] = [];
-  @Output() deleteItem = new EventEmitter<string>();
+  @Output() deleteItem = new EventEmitter<number>();
 
-  deleteTodo(todo: string) {
-    if (todo) {
-      this.deleteItem.emit(todo);
-      this.items = this.items.filter(todos => todo !== todos)
-    }
+  deleteTodo(index: number) {
+      this.deleteItem.emit(index);
+      this.items.splice(index, 1)
   }
 }

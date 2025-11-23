@@ -16,7 +16,6 @@ export class AddItem {
     const task = this.newTask.value?.trim();
     if (task) {
       this.newTodo.emit(task);
-      console.log(`New task added: ${task}`);
       this.newTask.reset();
     }
   }

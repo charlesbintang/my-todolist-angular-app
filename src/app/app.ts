@@ -16,17 +16,12 @@ export class App {
   addTodo(todo: string) {
     if (todo) {
       this.todos.update(todos => [...todos, todo]);
-      console.log(`New task added in list of todos: ${todo}`);
-      console.log(this.todos());
     }
   }
 
   removeTodo(todo: string) {
     if (todo) {
-      console.log(`Task: ${todo}`)
       this.todos.update(todos => todos.filter(item => item !== todo));
-      console.log(`Task removed from list of todos: ${todo}`);
-      console.log(`Todos: ${this.todos}`)
     }
   }
 }

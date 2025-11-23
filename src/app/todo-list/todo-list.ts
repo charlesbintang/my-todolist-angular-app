@@ -14,7 +14,6 @@ export class TodoList {
     if (todo) {
       this.deleteItem.emit(todo);
       this.items = this.items.filter(todos => todo !== todos)
-      console.log(`Task removed from list of todos: ${todo}`);
     }
   }
 }
